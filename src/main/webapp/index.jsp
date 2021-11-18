@@ -1,5 +1,15 @@
+<!DOCTYPE html>
+<%@page import="java.lang.ProcessBuilder.Redirect"%>
 <html>
+<head>
+<meta charset="utf-8">
+<title>index.jsp</title>
+</head>
+
 <body>
-<h2>Hello World!</h2>
+	<%
+	response.sendRedirect("news/goToMainPage");
+	%>
 </body>
+
 </html>
