@@ -23,7 +23,8 @@ header li {
 }
 
 header a {
-	font-size: 1.2em;
+	font-weight: 600;
+	font-size: 1.9em;
 	text-decoration: none;
 	color: #d54500;
 }

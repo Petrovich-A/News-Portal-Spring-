@@ -14,8 +14,8 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="/news">HOME</a></li>
-				<li><a href="">ADD NEWS</a></li>
+				<li><a href="news/goToMainPage">HOME</a></li>
+				<li><a href="<c:url value="/news/goToAddNewsPage"/>">ADD NEWS</a></li>
 			</ul>
 		</nav>
 	</header>

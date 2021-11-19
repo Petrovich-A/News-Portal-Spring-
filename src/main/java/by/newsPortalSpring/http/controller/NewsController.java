@@ -10,5 +10,10 @@ public class NewsController {
 	public String sayHelloy() {
 		return "mainPage";
 	}
+	
+	@RequestMapping("/goToAddNewsPage")
+	public String goToAddNewsPage() {
+		return "addNewsPage";
+	}
 
 }
