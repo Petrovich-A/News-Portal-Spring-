@@ -2,38 +2,48 @@ package by.newsPortalSpring.http.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import by.newsPortalSpring.http.dao.NewsDAO;
 import by.newsPortalSpring.http.entity.News;
 
+@Service
 public class NewsServiceImpl implements NewsService {
 
+	@Autowired
+	private NewsDAO newsDAO;
+
 	@Override
+	@Transactional
 	public List<News> readAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return newsDAO.readAll();
 	}
 
 	@Override
+	@Transactional
 	public void create(News news) {
-		// TODO Auto-generated method stub
-		
+		newsDAO.create(news);
 	}
 
 	@Override
+	@Transactional
 	public News read(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return newsDAO.read(id);
 	}
 
 	@Override
+	@Transactional
 	public void update(News news) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
+	@Transactional
 	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+		newsDAO.delete(id);
 	}
 
 }
