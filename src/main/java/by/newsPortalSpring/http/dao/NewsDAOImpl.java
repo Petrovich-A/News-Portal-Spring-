@@ -2,8 +2,6 @@ package by.newsPortalSpring.http.dao;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -29,24 +27,25 @@ public class NewsDAOImpl implements NewsDAO {
 
 	@Override
 	public void create(News news) {
-		// TODO Auto-generated method stub
-
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(news);
 	}
 
 	@Override
-	public News read(int Id) {
+	public News read(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		News news = session.get(News.class, id);
+		return news;
+	}
+
+	@Override
+	public News update(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public News update(int Id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void delete(int Id) {
+	public void delete(int id) {
 		// TODO Auto-generated method stub
 
 	}

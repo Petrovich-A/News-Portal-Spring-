@@ -29,6 +29,9 @@ public class News implements Serializable {
 	@Column(name = "content")
 	private String content;
 
+	@Column(name = "author")
+	private String author;
+
 	public News() {
 	}
 
@@ -62,6 +65,14 @@ public class News implements Serializable {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 	@Override

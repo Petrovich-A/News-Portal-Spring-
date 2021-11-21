@@ -10,10 +10,10 @@ public interface NewsDAO {
 
 	public void create(News news);
 
-	public News read(int Id);
+	public News read(int id);
 
-	public News update(int Id);
+	public News update(int id);
 
-	public void delete(int Id);
+	public void delete(int id);
 
 }
