@@ -17,7 +17,7 @@ public class News implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "idnews")
 	private int id;
 
 	@Column(name = "title")
