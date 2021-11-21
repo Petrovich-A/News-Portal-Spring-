@@ -23,7 +23,7 @@
 		<section id="news">
 			<h1>Добавьте новость</h1>
 			<form:form action="create" modelAttribute="news" method="POST">
-				<br />
+				<br /> 
 				<p>Enter Title</p>
 				<textarea name="title" rows="2" cols="45" required form="txtarea">${news.title}
 							</textarea>

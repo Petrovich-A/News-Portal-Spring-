@@ -46,7 +46,7 @@
 			<a href="${updateLink}">Update</a>
 			|
 			<a href="${deleteLink}">Delete</a>
-
+  
 			<hr>
 
 			<h1>В США расследуют методы Instagram по вовлечению детей и подростков</h1>
