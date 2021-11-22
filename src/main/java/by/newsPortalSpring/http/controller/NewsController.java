@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,11 +23,12 @@ public class NewsController {
 	@RequestMapping("/goToMainPage")
 	public String goToMainPage(Model model) {
 		List<News> listNews = newsService.readAll();
+//		List<News> listNews = new ArrayList<News>();
 		model.addAttribute("listNews", listNews);
 		return "mainPage";
 	}
 	
-	@RequestMapping("/goToAddNewsPage")
+	@GetMapping("/goToAddNewsPage")
 	public String goToAddNewsPage() {
 		return "addNewsPage";
 	}
@@ -40,9 +40,15 @@ public class NewsController {
 		return "readFullNewsPage";
 	}
 
-	@PostMapping("/create")
+	@GetMapping("/create")
 	public String createNews(@ModelAttribute("news") News news) {
 		newsService.create(news);
+		return "redirect:/news/goToMainPage";
+	}
+	
+	@GetMapping("/delete")
+	public String deleteNews(@ModelAttribute("newsId") int id) {
+		newsService.delete(id);
 		return "redirect:/news/goToMainPage";
 	}
 

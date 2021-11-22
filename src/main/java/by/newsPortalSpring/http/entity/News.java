@@ -32,9 +32,6 @@ public class News implements Serializable {
 	@Column(name = "author")
 	private String author;
 
-	public News() {
-	}
-
 	public int getId() {
 		return id;
 	}

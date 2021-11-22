@@ -26,7 +26,7 @@
 	</header>
 	<main>
 		<section id="news">
-			<c:forEach var="news" items="${listNews}" begin="0" end="1">
+			<c:forEach var="news" items="${listNews}" begin="0" end="9">
 				<c:url var="readLink" value="/news/read">
 					<c:param name="newsId" value="${news.id}" />
 				</c:url>
