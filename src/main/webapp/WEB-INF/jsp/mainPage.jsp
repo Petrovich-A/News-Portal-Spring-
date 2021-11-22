@@ -25,21 +25,23 @@
 		</nav>
 	</header>
 	<main>
-		<section id="news">
-			<c:forEach var="news" items="${listNews}" begin="0" end="1">
-				<c:url var="readLink" value="/news/read">
-					<c:param name="newsId" value="${news.id}" />
-				</c:url>
-				<h1>
-					<c:out value="${news.title}" />
-				</h1>
-				<h2>
-					<c:out value="${news.brief}" />
-				</h2>
-				<a href="${readLink}">Read</a>
-				<hr>
-			</c:forEach>
-		</section>
+		<div class="main">
+			<section id="news">
+				<c:forEach var="news" items="${listNews}" begin="0" end="1">
+					<c:url var="readLink" value="/news/read">
+						<c:param name="newsId" value="${news.id}" />
+					</c:url>
+					<h1>
+						<c:out value="${news.title}" />
+					</h1>
+					<h2>
+						<c:out value="${news.brief}" />
+					</h2>
+					<a href="${readLink}">Read</a>
+					<hr>
+				</c:forEach>
+			</section>
+		</div>
 	</main>
 	<footer>© IT-Academy task | WebApp: Spring+, 2021 </footer>
 
