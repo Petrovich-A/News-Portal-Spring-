@@ -35,13 +35,6 @@ public class NewsServiceImpl implements NewsService {
 
 	@Override
 	@Transactional
-	public void update(News news) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	@Transactional
 	public void delete(int id) {
 		newsDAO.delete(id);
 	}

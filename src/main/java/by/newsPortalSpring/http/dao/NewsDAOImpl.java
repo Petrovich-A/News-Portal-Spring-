@@ -51,9 +51,9 @@ public class NewsDAOImpl implements NewsDAO {
 	}
 
 	@Override
-	public News update(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public void update(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(news);
 	}
 
 	@Override

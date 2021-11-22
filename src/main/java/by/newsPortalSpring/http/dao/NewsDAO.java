@@ -12,7 +12,7 @@ public interface NewsDAO {
 
 	public News read(int id);
 
-	public News update(int id);
+	public void update(int id);
 
 	public void delete(int id);
 

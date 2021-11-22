@@ -11,8 +11,6 @@ public interface NewsService {
 	
 	public News read(int id);
 	
-	public void update(News news);
-
 	public void delete(int id);
 	
 }
