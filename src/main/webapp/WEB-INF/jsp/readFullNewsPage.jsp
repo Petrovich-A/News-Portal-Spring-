@@ -5,24 +5,29 @@
 <html>
 
 <head>
-
 <title>Read full news page</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=" UTF-8"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/>" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/readFullNews.css"/>" />
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
+	<div class="header">
+		<div class="inner_header">
+			<div class="logo_container">
+				<h1>
+					MY <span>NEWS PORTAL</span>
+				</h1>
+			</div>
+			<ul class="navigation">
 				<li><a href="<c:url value="/news/goToMainPage"/>">HOME</a></li>
 			</ul>
-		</nav>
-	</header>
+		</div>
+	</div>
 	<main>
 		<section id="news">
 			<c:url var="update" value="/news/update">
@@ -34,23 +39,21 @@
 			<h1>
 				<c:out value="${news.title}" />
 			</h1>
+			<p>
+				<c:out value="${news.author}" />
+			</p>
 			<h2>
 				<c:out value="${news.brief}" />
 			</h2>
 			<h3>
 				<c:out value="${news.content}" />
 			</h3>
-			<p>
-				<c:out value="${news.author}" />
-			</p>
+			<hr>
 			<a href="${update}">Update</a>
 			|
 			<a href="${delete}">Delete</a>
-			<hr>
-
 		</section>
 	</main>
 	<footer>© IT-Academy task | WebApp: Spring+, 2021 </footer>
-
 </body>
 </html>

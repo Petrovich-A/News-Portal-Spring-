@@ -7,41 +7,50 @@
 
 <head>
 <title>Add news page</title>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/>" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=" UTF-8"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/addNews.css"/>" />
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="goToMainPage">HOME</a></li>
+	<div class="header">
+		<div class="inner_header">
+			<div class="logo_container">
+				<h1>
+					MY <span>NEWS PORTAL</span>
+				</h1>
+			</div>
+			<ul class="navigation">
+				<li><a href="<c:url value="/news/goToMainPage"/>">HOME</a></li>
 			</ul>
-		</nav>
-	</header>
+		</div>
+	</div>
 	<main>
 		<section id="news">
 			<h1>Добавьте новость</h1>
 			<form:form action="create" modelAttribute="news" method="POST">
-				<br /> 
-				<p>Enter Title</p>
-				<textarea name="title" rows="2" cols="45" required form="txtarea">${news.title}
+				<br />
+				<h2>Title</h2>
+				<textarea name="title" rows="2" cols="60" required form="txtarea">${news.title}
 							</textarea>
 				<br />
-				<p>Enter Brief</p>
-				<textarea name="brief" rows="3" cols="45" required form="txtarea">${news.brief}
+				<h2>Brief</h2>
+				<textarea name="brief" rows="3" cols="60" required form="txtarea">${news.brief}
 							</textarea>
 				<br />
-				<p>Enter Content</p>
+				<h2>Content</h2>
 
-				<textarea name="content" rows="5" cols="45" required form="txtarea">${news.content}
+				<textarea name="content" rows="6" cols="60" required form="txtarea">${news.content}
 							</textarea>
 				<br />
-				<p>Enter Author</p>
-				<textarea name="author" rows="1" cols="45" required form="txtarea">${news.content}
+				<h2>Author</h2>
+				<textarea name="author" rows="2" cols="60" required form="txtarea">${news.content}
 							</textarea>
 				<br />
-				<input type="submit" value="Submit" class="create" />
+				<div class="button">
+					<input  type="submit" value="Submit" class="create" />
+				</div>
 			</form:form>
 		</section>
 	</main>
